@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/output.css">
+    <style>
+        /* Background container styling */
+        #background-container {
+            background-image: url('assets/full bg.svg'); 
+            background-size: cover;
+            background-position: left;
+            background-repeat: no-repeat;
+        }
+
+        #About{
+            background-image: url('assets/About-bg.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 900px;
+        }
+
+
+        /* For screens smaller than lg (lg and below) */
+@media (max-width: 1024px) { 
+    .background-image {
+        height: 900px;
+    }
+}
+
+        
+
+        /* Animation for text reveal */
+        @keyframes reveal {
+            0% {
+                opacity: 0;
+                transform: translateY(100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Animation for typing effect */
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        /* Animation for blinking cursor */
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        .typing {
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid;
+            animation: typing 3s steps(30) 1s 1 normal both, blink 500ms steps(30) infinite normal;
+        }
+
+        .reveal {
+            animation: reveal 1s ease forwards;
+        }
+
+        /* Animation for floating effect */
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .float-animation:hover {
+    animation-play-state: paused;
+}
+
+        /* Text content animation */
+        span:before {
+            content: 'HTML'; 
+            animation: animate 8s infinite; 
+        }
+
+        @keyframes animate {
+            0% { content: 'HTML'; color: orangered; }
+            20% { content: 'HTML'; color: orangered; }
+            25% { content: 'CSS'; color: blue; }
+            40% { content: 'CSS'; color: blue; }
+            50% { content: 'JAVASCRIPT'; color: #FFD700; }
+            60% { content: 'JAVASCRIPT'; color: #FFD700; }
+            75% { content: 'TAILWIND'; color: #673Ab7; }
+            80% { content: 'TAILWIND'; color:   #673Ab7; }
+            90% { content: 'UI/UX'; color: lightblue; }
+            100% { content: 'UI/UX'; color: lightblue; }
+        }
+
+        @media (max-width: 1778px) {
+    .hide-on-2xl {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1488px) {
+    .hide-on-blu {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hide-on-md {
+      display: none;
+    }
+  }
+
+
+
+  .center-pfp {
+    left:60%;
+}
+
+/* Media query for screens less than or equal to 1536px */
+@media (max-width: 1535px) {
+    .center-pfp {
+        left:60%;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <!-- Main container -->
+    <div id="first" class="">
+
+        <!-- Background container -->
+        <div id="background-container" class=" h-customHeight w-full  ">
+
+            <!-- Navigation Bar -->
+            <div id="nav" class="flex justify-center w-full">
+                <nav class=" bg-customPurple border border-transparent rounded-3xl flex mt-12 
+                h-6 w-texW6
+                sm:h-8 sm:w-texW5 sm:text-xl  sm:mx-4
+                md:h-8 md:w-texW4 md:text-xl md:mx-5
+                lg:h-10 lg:w-texW3 lg:text-2xl lg:mx-6
+                xl:h-10 xl:w-texW2 xl:2xl xl:mx-7
+                2xl:h-12 2xl:w-texW 2xl:text-2xl ">
+
+    <!-- Navigation buttons -->
+    <a href="index.html" class=" text-lg font-bold flex items-center justify-center hover:bg-customDarkp rounded-3xl text-white hover:text-customPink
+                   h-6 w-28 
+                sm:h-8 sm:w-32 sm:text-xl  sm:px-4
+                md:h-8 md:w-32 md:text-xl md:px-5
+                lg:h-10 lg:w-36 lg:text-2xl lg:px-6
+                xl:h-10 xl:w-36 xl:2xl xl:px-7
+                2xl:h-12 2xl:w-40 2xl:text-2xl 2xl:px-8 ">
+        Home
+            </a>
+
+    <a href="Project.html" class="  text-lg font-bold flex items-center justify-center hover:bg-customDarkp rounded-3xl text-white hover:text-customPink
+                   h-6 w-28
+                sm:h-8 sm:w-32 sm:text-xl  sm:px-4
+                md:h-8 md:w-32 md:text-xl md:px-5
+                lg:h-10 lg:w-36 lg:text-2xl lg:px-6
+                xl:h-10 xl:w-36 xl:2xl xl:px-7
+                2xl:h-12 2xl:w-40 2xl:text-2xl 2xl:px-8">
+        Project
+        </a>
+
+    <a href="About.html" class="text-lg font-bold flex items-center justify-center  bg-customDarkp rounded-3xl text-customPink
+    h-6 w-28 
+ sm:h-8 sm:w-32 sm:text-xl  sm:px-4
+ md:h-8 md:w-32 md:text-xl md:px-5
+ lg:h-10 lg:w-36 lg:text-2xl lg:px-6
+ xl:h-10 xl:w-36 xl:2xl xl:px-7
+ 2xl:h-12 2xl:w-40 2xl:text-2xl 2xl:px-8">
+About
+    </a>
+
+<a  href="Contact.html" class=" text-lg font-bold flex items-center justify-center hover:bg-customDarkp rounded-3xl text-white hover:text-customPink
+h-6 w-28
+sm:h-8 sm:w-32 sm:text-xl  sm:px-4
+md:h-8 md:w-32 md:text-xl md:px-5
+lg:h-10 lg:w-36 lg:text-2xl lg:px-6
+xl:h-10 xl:w-36 xl:2xl xl:px-7
+2xl:h-12 2xl:w-40 2xl:text-2xl 2xl:px-8">
+Contact
+</a>
+
+    
+
+   
+</nav>
+
+            </div>
+<div class="content mt-28 flex flex-col items-center sm:mt-28 sm:flex sm:flex-col sm:items-center md:flex md:flex-col md:items-center lg:flex  lg:flex-row xl:flex   2xl:flex 2xl:mt-28 3xl:ml-0 3xl:flex   3xl:w-3/4  3xl:mt-32">
+
+    <!-- Profile Picture -->
+    <div id="pfp" class="3xl:w-1/4     ">
+        
+        <img src="assets/pfp.svg" alt="Profile Picture" class=" h-64 w-64 sm:h-72 sm:w-72 md:h-80 md:w-80 lg:h-hough   lg:w-customW  reveal ">
+    </div>
+    
+    <!-- Description Text -->
+    <div class=" w-3/4 ml-9 flex justify-center sm:w-3/4 sm:ml-9 sm:flex sm:justify-center md:ml-11 md:flex md:justify-center lg:flex lg:items-center 2xl:flex 2xl:justify-center 3xl:flex-none ">
+        <p class=" text-3xl sm:text-4xl md:text-4xl lg:w-custW lg:text-4xl xl:text-5xl 2xl:flex 2xl:justify-center  2xl:text-6xl 2xl:items-center 3xl:flex 3xl:justify-center  3xl:text-6xl text-white w-3/4  reveal ">
+            Creating sleek, user-focused websites with a unique blend of creativity and precision.
+        </p>
+    </div> 
+</div>
+
+            
+
+            <!-- Floating Astronaut Image -->
+            <img src="assets/astronaut.svg" alt="Astronaut" class="absolute right-10 top-14 max-h-full max-w-full float-animation hide-on-2xl">
+
+            <!-- Social Media Icons -->
+            <div id="my-things" class=" flex justify-center xl:mt-0 lg:mt-10">
+                <a href="https://www.linkedin.com/in/sumit-dixit-2b1b01322/" target="_blank" rel="noopener noreferrer">
+
+                    <img src="assets/Linkedin.svg" alt="LinkedIn" class="md:h-20 md:w-60 sm:h-16 sm:w-52 se:h-10 se:w-44 h-8 w-40"> 
+                </a>
+                <a href="https://www.instagram.com/_sumit_453/" target="_blank" rel="noopener noreferrer">
+
+                    <img src="assets/Instagram.svg" alt="Instagram" class="md:h-20 md:w-60 sm:h-16 sm:w-52 h-10 w-44">
+                </a>
+                <a href="https://github.com/Sumitdixit2" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/Github.svg" alt="GitHub" class="md:h-20 md:w-60 sm:h-16 sm:w-52 h-10 w-44">
+                </a>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div id="About" class="flex flex-col items-center  ">
+        <div id="Aboutme" class="mt-24">
+            <p class="text-2xl se:text-2xl sm:text-4xl md:text-6xl lg:text-8xl font-bold  text-customSkin">
+                About Me
+            </p>
+        </div>
+        <div id="description" class="max-w-coh2 mt-16">
+           <p  class=" text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-bold text-white "> I’m a first-year BCA student with a deep passion for technology and a  strong drive to excel in the field. As a tech enthusiast, I’m constantly  exploring new innovations and honing my skills. My disciplined approach to  studies and ambition to achieve my goals guide me in every endeavor. Although I don't have many hobbies, my focus and dedication ensure that I stay committed to my aspirations and continuously strive for excellence. </p>
+        </div>
+    </div>
+
+     
+        <!-- Ending Section -->
+<div id="grey-bg" class="h-high w-full bg-customGreyD">
+
+    <!-- Main Content Area -->
+    <div id="content" class="h-1/2 w-full md:flex md:justify-around md:items-end flex justify-center items-end">
+        
+        <!-- Navigation Links (Hidden on Medium Devices) -->
+        <div id="content-1" class="h-56 w-32 text-white hide-on-md">
+            <li class="py-2 font-bold">-Home</li>
+            <li class="py-2 font-bold">-Project</li>
+            <li class="py-2 font-bold">-About</li>
+            <li class="py-2 font-bold">-Contact</li>
+        </div>
+
+        <!-- Navigation Links (Visible on Medium Devices) -->
+        <div id="content-2" class="h-56 w-32 text-white">
+            <li class="py-2 font-bold">-Home</li>
+            <li class="py-2 font-bold">-Project</li>
+            <li class="py-2 font-bold">-About</li>
+            <li class="py-2 font-bold">-Contact</li>
+        </div>
+
+        <!-- Additional Navigation Links (Hidden on Medium Devices) -->
+        <div id="content-3" class="h-56 w-32 text-white hide-on-md">
+            <li class="py-2 font-bold">-Home</li>
+            <li class="py-2 font-bold">-Project</li>
+            <li class="py-2 font-bold">-About</li>
+            <li class="py-2 font-bold">-Contact</li>
+        </div>
+
+        <!-- Additional Navigation Links (Hidden on Medium Devices) -->
+        <div id="content-4" class="h-56 w-32 text-white hide-on-md">
+            <li class="py-2 font-bold">-Home</li>
+            <li class="py-2 font-bold">-Project</li>
+            <li class="py-2 font-bold">-About</li>
+            <li class="py-2 font-bold">-Contact</li>
+        </div>
+
+    </div>
+
+    <!-- Social Media Links -->
+    <div id="links" class="flex justify-around">
+
+        <!-- LinkedIn Link -->
+        <a href="https://www.linkedin.com/in/sumit-dixit-2b1b01322/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/Linkedin.svg" alt="LinkedIn" class="md:h-20 md:w-60 sm:h-16 sm:w-52 h-10 w-44">
+        </a>
+
+        <!-- Instagram Link -->
+        <a href="https://www.instagram.com/_sumit_453/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/Instagram.svg" alt="Instagram" class="md:h-20 md:w-60 sm:h-16 sm:w-52 h-10 w-40">
+        </a>
+
+        <!-- GitHub Link -->
+        <a href="https://github.com/Sumitdixit2" target="_blank" rel="noopener noreferrer">
+            <img src="assets/Github.svg" alt="GitHub" class="md:h-20 md:w-60 sm:h-16 sm:w-52 h-10 w-40">
+        </a>
+
+    </div>
+
+    <!-- COPYRIGHT Section -->
+    <div id="copy" class="h-24 w-full bg-black mt-14 flex justify-center items-center text-white font-bold text-sm sm:text-xl md:text-2xl">
+        Copyright© 2024 All Rights Reserved | Sumit Dixit
+    </div>
+
+</div>
+
+    </body>
+    </html>
